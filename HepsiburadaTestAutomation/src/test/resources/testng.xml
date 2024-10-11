@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="n11 Test Suite" verbose="1">
+    <test name="n11 Tests">
+        <classes>
+            <class name="LoginTest"/>
+            <class name="SignUpTest"/>
+            <class name="SearchTest"/>
+            <class name="AddAddressTest"/>
+            <class name="AddBasketTest"/>
+        </classes>
+    </test>
+</suite>
