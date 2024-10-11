@@ -81,7 +81,7 @@ public class AddAddressTest extends BaseTest {
                 .Sleep(300);
 
         String errorMessage = saveAddressPage.getErrorMessage("div[data-errormessagefor='cityId'] div[class='errorText']");
-        AssertEquals("Lütfen ilçe seçin.", errorMessage);
+        AssertEquals("Lütfen şehir seçin.", errorMessage);
 
         errorMessage = saveAddressPage.getErrorMessage("div[data-errormessagefor='districtId'] div[class='errorText']");
         AssertEquals("Lütfen ilçe seçin.", errorMessage);
@@ -145,7 +145,7 @@ public class AddAddressTest extends BaseTest {
                 .Sleep(300);
 
         String errorMessage = saveAddressPage.getErrorMessage("div[data-errormessagefor='gsm'] div[class='errorText']");
-        AssertEquals("Lütfen cep telefon numarası girin.", errorMessage);
+        AssertEquals("Lütfen cep telefonu numarası girin.", errorMessage);
 
     }
 
@@ -202,7 +202,6 @@ public class AddAddressTest extends BaseTest {
                 .fillAddressDetail("Battalgazi Mahallesi 1031.sokak no 1/3 Altındağ Ankara")
                 .fillPhoneNumber(phoneNumber)
                 .clickCoorparateInvoiceType()
-                .fillIdNumber("95653020246")
                 .fillCompanyName("Test Company")
                 .fillTaxNumber("1234567890")
                 .fillTaxOffice("Test Tax Office")
@@ -225,7 +224,6 @@ public class AddAddressTest extends BaseTest {
                 .fillAddressDetail("Battalgazi Mahallesi 1031.sokak no 1/3 Altındağ Ankara")
                 .fillPhoneNumber(phoneNumber)
                 .clickCoorparateInvoiceType()
-                .fillIdNumber("95653020246")
                 .fillTaxNumber("4457902784")
                 .fillTaxOffice("Test Tax Office")
                 .clickSaveButton()
@@ -248,7 +246,6 @@ public class AddAddressTest extends BaseTest {
                 .fillAddressDetail("Battalgazi Mahallesi 1031.sokak no 1/3 Altındağ Ankara")
                 .fillPhoneNumber(phoneNumber)
                 .clickCoorparateInvoiceType()
-                .fillIdNumber("95653020246")
                 .fillCompanyName("Test Company")
                 .fillTaxOffice("Test Tax Office")
                 .clickSaveButton()
@@ -271,13 +268,12 @@ public class AddAddressTest extends BaseTest {
                 .fillAddressDetail("Battalgazi Mahallesi 1031.sokak no 1/3 Altındağ Ankara")
                 .fillPhoneNumber(phoneNumber)
                 .clickCoorparateInvoiceType()
-                .fillIdNumber("95653020246")
                 .fillCompanyName("Test Company")
                 .fillTaxNumber("4457902784")
                 .clickSaveButton()
                 .Sleep(300);
 
-        String errorMessage = saveAddressPage.getErrorMessage("div[data-errormessagefor='shipping_taxOffice'] div[class='errorText']");
+        String errorMessage = saveAddressPage.getErrorMessage("div[data-errormessagefor='shipping_taxHouse_corporate'] div[class='errorText']");
         AssertEquals("Bu alanın doldurulması zorunludur.", errorMessage);
 
     }
@@ -294,9 +290,8 @@ public class AddAddressTest extends BaseTest {
                 .fillAddressDetail("Battalgazi Mahallesi 1031.sokak no 1/3 Altındağ Ankara")
                 .fillPhoneNumber(phoneNumber)
                 .clickCoorparateInvoiceType()
-                .fillIdNumber("95653020246")
                 .fillCompanyName("Test Company")
-                .fillTaxNumber("123456789")
+                .fillTaxNumber("1234567898")
                 .fillTaxOffice("Test Tax Office")
                 .clickSaveButton()
                 .Sleep(300);
@@ -317,11 +312,9 @@ public class AddAddressTest extends BaseTest {
                 .fillAddressDetail("Battalgazi Mahallesi 1031.sokak no 1/3 Altındağ Ankara")
                 .fillPhoneNumber(phoneNumber)
                 .clickCoorparateInvoiceType()
-                .fillIdNumber("95653020246")
                 .fillCompanyName("Test Company")
                 .fillTaxNumber("123456789")
                 .fillTaxOffice("Test Tax Office")
-                .clickSaveButton()
                 .Sleep(300);
 
         String errorMessage = saveAddressPage.getErrorMessage("div[data-errormessagefor='shipping_taxId'] div[class='errorText']");
